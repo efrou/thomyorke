@@ -1,0 +1,550 @@
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  padding: 0; 
+}
+
+
+.home{
+  background: url("../Proyecto\ Integrador\ Thom\ Yorke/img/bg_home.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: grayscale(0.8);
+  position: relative;
+}
+
+.thom{
+  text-align: center;
+  font-size: 17px;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  margin-top: 80px;
+}
+
+/* pulsating circle*/
+
+.pulsatingCircle{
+  width:25px;
+  height:25px;
+  display:block;
+  position:relative;
+  margin-top: -25px;
+  transform:scale(5,5);
+  -webkit-transform:scale(5,5);
+ 
+}
+
+.firstCircle,
+.secondCircle,
+.thirdCircle{
+  top:50%;
+  left:50%;
+  display:block;
+  border-radius:50%;
+  position:absolute;
+  vertical-align:middle;
+}
+  
+.firstCircle{
+  width:10px;
+  height:10px;
+  margin:-5px 0 0 -5px;
+  background-color:#ccc;
+}
+
+.secondCircle{
+  width:16px;
+  height:16px;
+  margin:-9px 0 0 -9px;
+  border:1px solid #ccc;
+  animation:2000ms pulseIn ease-in-out infinite;
+  -webkit-animation:2000ms pulseIn ease-in-out infinite;						
+}
+
+@keyframes pulseIn{
+  0%{
+    opacity:0;
+    transform:scale(0.2,0.2);
+  }
+  50%{
+    opacity:1;
+    transform:scale(1,1);
+  }
+  100%{
+          opacity:0;
+    transform:scale(0.2,0.2);
+  }
+}
+
+@-webkit-keyframes pulseIn{
+        0%{
+    opacity:0;
+    -webkit-transform:scale(0.2,0.2);
+  }
+  50%{
+    opacity:1;
+    -webkit-transform:scale(1,1);
+  }
+  100%{
+          opacity:0;
+    -webkit-transform:scale(0.2,0.2);
+  }
+}
+      
+.thirdCircle{
+  width:24px;
+  height:24px;
+  border:1px solid #ccc;
+  margin:-13px 0 0 -13px;
+  animation:2000ms pulseIn 500ms ease-in-out infinite;
+  -webkit-animation:2000ms pulseIn 500ms ease-in-out infinite		
+}
+
+
+
+.titles {
+  font-size: 25px;
+  font-family: 'Sarala', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/*ALBUMS*/
+
+  .discos {
+    background-image: url(../Proyecto\ Integrador\ Thom\ Yorke/img/bg_albums4.png);
+    background-position: middle;
+    background-attachment: fixed;
+    background-size: 100%;
+    filter: grayscale(0.5);
+    width: 100%;
+    margin-top: -20px;
+    padding: 30px 0 50px 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+  }
+
+  .photo-grid-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .photo-grid {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;  
+    align-items: center;
+      
+  }
+  
+  .photo-grid-item {
+    border: 1px solid #fff;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin-right: 20px;   
+  }
+
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    transition: .1s ease;
+    background-color:rgba(255, 0, 150, 0);
+    align-items: center;
+  }
+
+  .photo-grid-item:hover .overlay{
+    background-color:rgba(255, 0, 150, 0.5);
+  }
+
+  .overlay i{
+    position: absolute;
+    color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: .1s ease;
+
+  }
+
+  .overlay:hover i{
+    opacity: 1;
+  }
+
+
+
+/*NAVBAR*/
+
+/* Add a black background color to the top navigation */
+.topnav {
+  overflow: hidden;
+  background-color: #ccc;
+  margin: -15px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1030;
+}
+
+/* Style the links inside the navigation bar */
+.logo{
+  float: left !important;
+  margin-top: 15px;
+}
+
+ul{
+  list-style: none;
+  float: right;
+  display: block;
+}
+
+li{
+  display: inline-block;
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: #0096ff;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+  color: #ff0096 !important;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/*Shows*/
+
+.shows{
+  margin-bottom: 60px;
+}
+.tour{
+  display: flex;
+}
+
+.wrapper{
+  width:100%;
+}
+
+.menu{
+}
+
+.place {
+  float: right;
+  margin-top: -60px;
+  display: inline-block;
+  width: 40%;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  font-weight: lighter;
+  font-size: 1em;
+  color:#767a7b;
+}
+
+.head{ 
+  color:red;
+  text-align:center;
+  background-color:#0096ff;
+  color:#fff;
+  font-size:1.5em;
+  font-weight:200;
+  font-family:'Roboto', sans-serif;
+  width: 80%;
+  margin-left: 10%;
+  -webkit-border-radius:3px;
+   -moz-border-radius:3px;
+    border-radius:3px;
+  -webkit-box-shadow: 0px 0px 2px #888888;
+  -moz-box-shadow: 0px 0px 2px #888888;
+     box-shadow: 0px 0px 2px #888888;
+}
+
+.info{
+  width:60%;
+  margin-left:22%;
+  display:inline-block;
+
+}
+
+.info h3 {
+
+  color:#767a7b;
+  margin:0;
+  padding-bottom:20px;
+  font-size:1.3em;
+  font-weight:200;
+  font-family:'Roboto', sans-serif;
+  padding-top: 15px;
+}
+
+.info h1 {
+  color:#767a7b;
+  margin-top: -15px;
+  font-size:1em;
+  font-weight:200;
+  font-family:'Roboto', sans-serif;
+}
+
+hr{
+  width: 80%;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #e0e1dd;
+  border: 0 none;
+}
+
+/*videos con efecto*/
+
+.videos {
+  background-color: black;
+  margin-top: -21px;
+  padding: 30px 0 20px 0;
+}
+
+.titles-videos {
+  font-size: 25px;
+  font-family: 'Sarala', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.box {
+  flex: 6;
+  overflow: hidden;
+  transition: .5s;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, .1);
+  line-height: 0;
+}
+
+.box>img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover;
+  transition: .5s;
+}
+
+.box>span {
+  font-size: 3vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+  color: white;
+  font-family: 'Sarala', sans-serif;
+  text-transform: uppercase;
+}
+
+.box:hover {
+  flex: 1 1 33.5%;
+}
+
+.box:hover>img {
+  width: 100%;
+  height: 100%;
+}
+
+/*news*/
+
+article{
+  display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+  width: 100%;
+}
+
+.card-1{
+  position: relative;
+}
+
+.flexbox img{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  filter: opacity(100%);
+}
+
+.flexbox:hover img{
+  transition: all .1s ease-in-out;
+  filter: opacity(50%);
+}
+
+
+
+.overlay-card1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.flexbox:hover .overlay-card1 {
+  opacity: 1;
+  transition: all .1s ease-in-out;
+
+}
+
+.card-1 a{
+  text-decoration: none;
+  
+}
+
+.overlay-card1 p{
+  font-family: 'Lato', sans-serif;
+  color: black;
+  font-weight: bold;
+}
+
+.second{
+  font-family: 'Lato', sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 150%;
+}
+
+/*footer*/
+
+footer {
+  background-color: rgb(34, 34, 34);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0px;
+  text-align: center;
+}
+
+footer i {
+  color: white;
+  margin-right: 5px;
+}
+
+footer i:hover{
+  color: #ff0096;
+}
+
+/*responsive*/
+
+
+@media all and (max-width: 650px) {
+	.flexbox {
+		width: 100%;
+  }
+  
+  .flexbox img{
+    filter: opacity(50%);
+  }
+
+  .overlay-card1{
+    opacity: 1;
+  }
+
+  .photo-grid-item .overlay{
+    background-color: rgba(114, 104, 110, 0.5);
+  }
+
+  .overlay i{
+    opacity: 1;
+  }
+}
+
+@media all and (min-width: 651px) {
+	.card-1 {
+    width: 33.33%;
+  }
+	.card-2 {
+		width: 66.67%;
+	}
+	.card-3 {
+		width: 100%;
+  }
+  .noticias{
+  margin-top: -5px;
+}
+}
+
+
+/* When the screen is less than 600 pixels wide, hide all links. Show the link that contains should open and close the topnav (.icon) */
+@media only screen and (max-width: 650px) {
+  .logo {display: none !important;}
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: left;
+    display: block;
+  }
+  ul {
+    float: left;
+    display: grid ;
+    margin: 0;
+  }
+  .topnav {
+    margin: 0;
+  }
+  .lista-vertical{
+    padding: 0 37.5%;
+  }
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    float: left;
+  }
+  .topnav.responsive .lista-vertical a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+
+  .topnav a:hover{
+    color: black;
+  }
+}
